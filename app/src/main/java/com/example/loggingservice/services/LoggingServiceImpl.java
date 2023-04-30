@@ -24,7 +24,7 @@ public class LoggingServiceImpl implements LoggingService{
         }
     }
 
-    public GetLogsResponseModel getLogById(String logId) throws Exception {
+    public GetLogsResponseModel getLogById(String logId) {
         GetLogsResponseModel responseModel = new GetLogsResponseModel();
         List<Log> logList = responseModel.getLogList();
 

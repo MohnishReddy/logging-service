@@ -7,5 +7,5 @@ import java.util.Date;
 
 public interface LoggingService {
     String addLog(String tag, String message, LogType logType, Date timestamp, String createdBy) throws Exception;
-    GetLogsResponseModel getLogById(String logId) throws Exception;
+    GetLogsResponseModel getLogById(String logId);
 }
