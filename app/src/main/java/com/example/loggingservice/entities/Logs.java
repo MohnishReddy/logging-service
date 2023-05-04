@@ -54,6 +54,41 @@ public class Logs {
         return dataMap;
     }
 
+    public static String getDbFieldName(LogEntityMapKey key) {
+        switch (key) {
+            case LOG_ID -> {
+                return "logId";
+            }
+            case TAG -> {
+                return "tag";
+            }
+            case MESSAGE -> {
+                return "message";
+            }
+            case LOG_TYPE -> {
+                return "logType";
+            }
+            case TIMESTAMP -> {
+                return "timestamp";
+            }
+            case CREATED_BY -> {
+                return "createdBy";
+            }
+            case CREATED_AT -> {
+                return "createdAt";
+            }
+            case TRUSTED -> {
+                return "trusted";
+            }
+            case VISIBLE -> {
+                return "visible";
+            }
+            default -> {
+                return null;
+            }
+        }
+    }
+
     private String getUniqueId() {
         return UUID.randomUUID().toString();
     }

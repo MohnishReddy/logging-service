@@ -9,6 +9,7 @@ import java.util.List;
 @Data
 public class GetLogsResponseModel {
     private List<Log> logList;
+    private String errMessage;
 
     public GetLogsResponseModel() {
         logList = new ArrayList<>();
