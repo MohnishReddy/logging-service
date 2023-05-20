@@ -23,6 +23,7 @@ public class LoggingController {
     @Autowired
     private LoggingService loggingService;
 
+    @CrossOrigin
     @PostMapping(path = "/add", produces = "application/json")
     public ResponseEntity<AddLogResponseModel> addLog(@RequestBody AddLogRequestModel logRequest) {
         AddLogResponseModel response = new AddLogResponseModel();
@@ -38,6 +39,7 @@ public class LoggingController {
         }
     }
 
+    @CrossOrigin
     @GetMapping(path = "/log/{logId}", produces = "application/json")
     public ResponseEntity<GetLogsResponseModel> getLog(@PathVariable String logId) {
         GetLogsResponseModel response = new GetLogsResponseModel();
@@ -53,6 +55,7 @@ public class LoggingController {
         }
     }
 
+    @CrossOrigin
     @PutMapping(path = "/log/{logId}/update", produces = "application/json")
     public ResponseEntity<UpdateLogResponseModel> updateLog(@PathVariable String logId, @RequestBody UpdateLogRequestModel updateReq) {
         UpdateLogResponseModel response = new UpdateLogResponseModel();
@@ -68,6 +71,7 @@ public class LoggingController {
         }
     }
 
+    @CrossOrigin
     @GetMapping(path = "/log/list", produces = "application/json")
     public ResponseEntity<GetLogsResponseModel> getFilteredListOfLogs(
             @RequestParam(required = false) String[] logTypeList,
